@@ -1,0 +1,16 @@
+@import "tailwindcss";
+@source "./src/*.{html,js}";
+@plugin "daisyui" {
+  themes: all;
+  
+}
+.no-scrollbar::-webkit-scrollbar {
+  display: none;
+}
+
+.text-image-fill {
+  background-clip: text;
+  -webkit-background-clip: text;
+  color: transparent;
+  -webkit-text-fill-color: transparent;
+}
