@@ -1,198 +1,280 @@
 <!DOCTYPE html>
-<html lang="en" data-theme="wireframe" > 
+<html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Portfolio</title>
-     <link href="./output.css" rel="stylesheet">
-     <style>
-  html {
-    scroll-behavior: smooth;
-  }
-</style>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>BALAJI — Portfolio</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;600;700;900&family=Syne:wght@400;500;600;700&family=JetBrains+Mono:wght@300;400;500&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="./output.css" />
 </head>
-<body class="snap-y snap-mandatory overflow-y-scroll h-screen no-scrollbar">
- <div class="navbar bg-base-100 shadow-sm mb-1.5">
-  <div class="navbar-start">
-    <!--Hamburger-->
-    <div class="dropdown">
-  <div tabindex="0" role="button" class="btn btn-ghost lg:hidden">
-    <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h8m-8 6h16" />
-    </svg>
-  </div>
-  <ul tabindex="0" class="menu menu-sm dropdown-content mt-3 z-[1] p-2 shadow bg-base-100 rounded-box w-52">
-    <li><a href="#skills">Skills</a></li>
-    <li><a href="#about">About</a></li>
-    <li><a href="#contact">Contact</a></li>
-  </ul>
-</div>
-<!--Navbar-->
-    <a class="btn btn-ghost text-3xl">BALAJI</a>
-  </div>
-  <div class="navbar-center hidden lg:flex">
-    <ul class="menu menu-horizontal px-1 text-lg">
-      <li><a href="#skills">Skills</a></li>
-      <li><a href="#about">About</a></li>
-      <li><a href="#contact">Contact</a></li>
-    </ul>
-  </div>
-  <div class="navbar-end">
-    <a class="btn btn-outline btn-info btn-dash">HIRE ME!</a>
-  </div>
-</div>
-<!-- About Me-->
-<div class="hero min-h-screen overflow-y-auto no-scrollbar mb-1.5" style="background-image: url(../src/img/1311994.jpeg);">
-  <div class="hero-overlay"></div>
-  <div class="hero-content text-neutral-content text-center">
-    <div class="max-w-md">
-      <h1 class="mb-5 text-5xl font-bold">Hello there!</h1>
-      <p class="mb-5 font-medium">
-        This is a trial project to showcase my journey into fullstack web development. I'm exploring design, code, and creativity — All in one place!
+<body>
+
+  <!-- Custom Cursor -->
+  <div id="cursor"></div>
+  <div id="cursor-trail"></div>
+
+  <!-- Grid Overlay -->
+  <div class="grid-overlay" aria-hidden="true"></div>
+
+  <!-- ═══════════════════════ NAVBAR ═══════════════════════ -->
+  <nav class="navbar" id="navbar">
+    <div class="nav-inner">
+      <a href="#" class="nav-logo">[BALAJI]</a>
+      <ul class="nav-links" id="nav-links">
+        <li><a href="#skills" class="nav-link"><span class="link-num">01</span>Skills</a></li>
+        <li><a href="#about" class="nav-link"><span class="link-num">02</span>About</a></li>
+        <li><a href="#contact" class="nav-link"><span class="link-num">03</span>Contact</a></li>
+      </ul>
+      <a href="#contact" class="btn-hire">HIRE ME</a>
+      <button class="hamburger" id="hamburger" aria-label="Menu">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </nav>
+
+  <!-- ═══════════════════════ HERO ═══════════════════════ -->
+  <section class="hero-section" id="hero">
+    <div class="orb orb-1"></div>
+    <div class="orb orb-2"></div>
+    <div class="orb orb-3"></div>
+    <div id="particles" aria-hidden="true"></div>
+
+    <div class="hero-content">
+      <div class="hero-tag">
+        <span class="tag-dot"></span>
+        <span class="tag-text">Available for work</span>
+      </div>
+
+      <h1 class="hero-title">
+        <span class="title-line title-outline">BUILDING</span>
+        <span class="title-line title-fill">THE WEB</span>
+        <span class="title-line title-sub">OF TOMORROW</span>
+      </h1>
+
+      <p class="hero-desc">
+        A trial project by Balaji — exploring fullstack development,<br />
+        design systems, and creative engineering.
       </p>
-      <button class="btn btn-success btn-dash rounded-b-lg">Get Started</button>
-    </div>
-  </div>
-</div>
-<section id="skills" class="min-h-screen p-6 snap-start snap-always bg-base-200">
-  <h2 class="text-4xl font-bold text-center mb-10 font-mono">My Skills</h2>
-  <div class="flex flex-wrap justify-between gap-6">
-  <!-- Card 1 -->
-  <div class="card bg-gray-300 w-96 shadow-sm">
-    <figure>
-      <img src="./img/html.jpeg" alt="HTML"class="w-full object-cover h-57" />
-    </figure>
-    <div class="card-body">
-      <h2 class="card-title">
-        HTML
-        <div class="badge  badge-outline">NEW</div>
-      </h2>
-      <p>HTML is the standard markup language used to create web pages. It structures the content using elements like headings, paragraphs, images, and links.</p>
-    </div>
-  </div>
 
-  <!-- Card 2 -->
-  <div class="card bg-gray-300 w-96 shadow-sm">
-    <figure>
-      <img src="./img/css.jpeg" alt="CSS" class="w-full object-cover h-57"/>
-    </figure>
-    <div class="card-body">
-      <h2 class="card-title">
-        CSS
-        <div class="badge  badge-outline">NEW</div>
-      </h2>
-      <p>CSS controls the visual style of web pages. It handles colors, spacing, layout, fonts, and responsiveness across different screen sizes.</p>
-      <div class="card-actions justify-end">
-        <div class="badge badge-outline">TailWind 4.1</div>
-        <div class="badge badge-outline">DaisyUI 5.0</div>
+      <div class="hero-actions">
+        <a href="#skills" class="btn-primary-glow">Explore Work</a>
+        <a href="#contact" class="btn-ghost-glow">Get in Touch</a>
+      </div>
+
+      <div class="scroll-indicator">
+        <div class="scroll-line"></div>
+        <span>SCROLL</span>
       </div>
     </div>
-  </div>
+  </section>
 
-  <!-- Card 3 -->
-  <div class="card bg-gray-300 w-96 shadow-sm">
-    <figure>
-      <img src="./img/js3.png" alt="Shoes" class="w-full object-cover h-57" />
-    </figure>
-    <div class="card-body">
-      <h2 class="card-title">
-        JAVASCRIPT
-        <div class="badge  badge-outline">NEW</div>
-      </h2>
-      <p>JavaScript adds interactivity and logic to websites. It responds to user actions, updates content, and powers dynamic functionality.</p>
+  <!-- ═══════════════════════ SKILLS ═══════════════════════ -->
+  <section id="skills" class="section skills-section">
+    <div class="section-header">
+      <span class="section-label">// 01</span>
+      <h2 class="section-title">My Skills</h2>
+      <div class="section-line"></div>
     </div>
-  </div>
-</div>
-</section>
 
+    <div class="skills-grid">
 
-<div class="relative snap-start snap-always">
-  <!-- Title pinned at top center -->
-  <h2 class="absolute top-8 left-1/2 transform -translate-x-1/2 text-4xl font-bold font-mono z-10">
-    About Me
-  </h2>
+      <div class="skill-card" data-tilt>
+        <div class="card-glow"></div>
+        <div class="card-icon">
+          <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M4 3L5.5 19L12 21L18.5 19L20 3H4Z" stroke="#00e5ff" stroke-width="1.5"/>
+            <path d="M16 7H8L8.5 12.5L12 14L15.5 12.5L16 9H8.5" stroke="#00e5ff" stroke-width="1.2"/>
+          </svg>
+        </div>
+        <div class="card-info">
+          <div class="card-top">
+            <h3 class="card-name">HTML</h3>
+            <span class="card-badge">NEW</span>
+          </div>
+          <p class="card-desc">Standard markup language that forms the structural backbone of every web page — elements, semantics, and accessibility.</p>
+          <div class="progress-wrap">
+            <div class="progress-bar" data-width="72"></div>
+          </div>
+          <div class="card-tags">
+            <span class="tag">Semantic</span>
+            <span class="tag">Accessible</span>
+            <span class="tag">SEO</span>
+          </div>
+        </div>
+      </div>
 
-  <!-- Hero Section -->
-  <div id="about" class="hero bg-base-200 min-h-screen">
-    <div class="hero-content flex-col lg:flex-row-reverse items-center">
-      
-      <!-- Image -->
-      <img
-        src="./img/3.jpg"
-        class="max-w-sm w-full lg:w-auto flex-1 rounded-lg shadow-2xl"
-      />
+      <div class="skill-card" data-tilt>
+        <div class="card-glow"></div>
+        <div class="card-icon">
+          <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M4 3L5.5 19L12 21L18.5 19L20 3H4Z" stroke="#7c3aed" stroke-width="1.5"/>
+            <path d="M16 7H8L8.5 10H15L14.5 14L12 15L9.5 14L9.3 12H7.5L7.8 16.5L12 18L16.2 16.5L17 7H8.5" stroke="#7c3aed" stroke-width="1.2"/>
+          </svg>
+        </div>
+        <div class="card-info">
+          <div class="card-top">
+            <h3 class="card-name">CSS</h3>
+            <span class="card-badge">NEW</span>
+          </div>
+          <p class="card-desc">Controls visual styling across every screen. Colors, layout, animation, and responsive design — the aesthetic layer of the web.</p>
+          <div class="progress-wrap">
+            <div class="progress-bar secondary" data-width="65"></div>
+          </div>
+          <div class="card-tags">
+            <span class="tag">TailwindCSS 4.1</span>
+            <span class="tag">DaisyUI 5.0</span>
+          </div>
+        </div>
+      </div>
 
-      <!-- Text Content -->
-      <div class="flex-1">
-        <h1 class="text-5xl font-bold">Hey, I'm Balaji!</h1>
-        <p class="py-6">     
-                I'm an aspiring fullstack developer who enjoys learning and building simple, useful web applications. I believe in writing clean code, paying attention to design, and improving step by step.  
-                <br /><br />
-                This project is just a small trial — a way for me to practice what I've learned so far and slowly grow my skills as a developer. I'm still figuring things out, but I'm committed to the journey.
+      <div class="skill-card" data-tilt>
+        <div class="card-glow"></div>
+        <div class="card-icon">
+          <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <rect x="3" y="3" width="18" height="18" rx="1" stroke="#00ff88" stroke-width="1.5"/>
+            <path d="M7 16C7 17 8 18 10 18C12 18 13 17 13 15.5C13 14 12 13.5 10.5 13L9.5 12.5C8.5 12 8 11.5 8 10.5C8 9.5 9 9 10 9C11 9 11.5 9.5 12 10.5" stroke="#00ff88" stroke-width="1.2" stroke-linecap="round"/>
+            <path d="M15 9V16.5C15 17.5 14.5 18 13.5 18" stroke="#00ff88" stroke-width="1.2" stroke-linecap="round"/>
+          </svg>
+        </div>
+        <div class="card-info">
+          <div class="card-top">
+            <h3 class="card-name">JavaScript</h3>
+            <span class="card-badge">NEW</span>
+          </div>
+          <p class="card-desc">Brings logic and life to the web. Event handling, DOM manipulation, async calls, and dynamic interfaces.</p>
+          <div class="progress-wrap">
+            <div class="progress-bar accent" data-width="58"></div>
+          </div>
+          <div class="card-tags">
+            <span class="tag">ES2024</span>
+            <span class="tag">Async</span>
+            <span class="tag">DOM</span>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ═══════════════════════ ABOUT ═══════════════════════ -->
+  <section id="about" class="section about-section">
+    <div class="section-header">
+      <span class="section-label">// 02</span>
+      <h2 class="section-title">About Me</h2>
+      <div class="section-line"></div>
+    </div>
+
+    <div class="about-grid">
+
+      <div class="about-image-wrap reveal-left">
+        <div class="img-frame">
+          <div class="img-corner tl"></div>
+          <div class="img-corner tr"></div>
+          <div class="img-corner bl"></div>
+          <div class="img-corner br"></div>
+          <div class="img-scanline"></div>
+          <div class="img-placeholder">
+            <div class="avatar-initials">B</div>
+            <div class="avatar-ring"></div>
+          </div>
+        </div>
+        <div class="about-stats">
+          <div class="stat-item">
+            <span class="stat-num" data-count="3">0</span>
+            <span class="stat-label">Skills</span>
+          </div>
+          <div class="stat-item">
+            <span class="stat-num" data-count="1">0</span>
+            <span class="stat-label">Projects</span>
+          </div>
+          <div class="stat-item">
+            <span class="stat-num" data-count="100">0</span>
+            <span class="stat-label">Dedication %</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="about-text reveal-right">
+        <h3 class="about-name">Hey, I'm <span class="text-cyan">Balaji!</span></h3>
+        <div class="about-stack">
+          <span class="stack-chip">HTML</span>
+          <span class="stack-chip">CSS</span>
+          <span class="stack-chip">JavaScript</span>
+          <span class="stack-chip">TailwindCSS</span>
+          <span class="stack-chip">DaisyUI</span>
+        </div>
+        <p class="about-desc">
+          I'm an aspiring fullstack developer who enjoys learning and building simple, useful web applications. I believe in writing clean code, paying attention to design, and improving step by step.
         </p>
-        <button class="btn  btn-dash btn-info">HIRE ME!</button>
+        <p class="about-desc">
+          This project is a small trial — a way for me to practice what I've learned so far and slowly grow my skills as a developer. Still figuring things out, but fully committed to the journey.
+        </p>
+        <a href="#contact" class="btn-primary-glow">HIRE ME</a>
       </div>
-      
+
     </div>
-  </div>
-</div>
+  </section>
 
+  <!-- ═══════════════════════ CONTACT / FOOTER ═══════════════════════ -->
+  <section id="contact" class="section contact-section">
+    <div class="section-header">
+      <span class="section-label">// 03</span>
+      <h2 class="section-title">Contact</h2>
+      <div class="section-line"></div>
+    </div>
 
-<div id="contact" class="relative snap-start snap-always">
-  <!-- Title pinned at top center -->
-  <h2 class="absolute top-8 left-1/2 transform -translate-x-1/2 text-4xl font-bold font-mono z-10">
-    Contact
-  </h2>
- <footer class="relative bg-neutral text-neutral-content min-h-screen p-10 pt-16"><br> <br>
-  <!-- Grid layout for navs -->
-  <div class="grid grid-cols-1 sm:grid-cols-3 gap-y-10 gap-x-20">
-    <nav>
-      <h6 class="footer-title">Services</h6>
-      <a class="link link-hover block">Branding</a>
-      <a class="link link-hover block">Design</a>
-      <a class="link link-hover block">Marketing</a>
-      <a class="link link-hover block">Advertisement</a>
-    </nav>
-    <nav>
-      <h6 class="footer-title">Details</h6>
-      <a class="link link-hover block" href="#about">About</a>
-      <a class="link link-hover block">Contact</a>
-    </nav>
-    <nav>
-      <h6 class="footer-title">Legal</h6>
-      <a class="link link-hover block">Terms of use</a>
-      <a class="link link-hover block">Privacy policy</a>
-      <a class="link link-hover block">Cookie policy</a>
-    </nav>
-    <nav>
-      <h6 class="footer-title">Social</h6>
-      <a class="link link-hover block">Twitter</a>
-      <a class="link link-hover block">Instagram</a>
-      <a class="link link-hover block">Facebook</a>
-      <a class="link link-hover block">GitHub</a>
-    </nav>
-    <nav>
-      <h6 class="footer-title">Explore</h6>
-      <a class="link link-hover block">Features</a>
-      <a class="link link-hover block">Enterprise</a>
-      <a class="link link-hover block">Security</a>
-      <a class="link link-hover block">Pricing</a>
-    </nav>
-    <nav>
-      <h6 class="footer-title">Apps</h6>
-      <a class="link link-hover block">Mac</a>
-      <a class="link link-hover block">Windows</a>
-      <a class="link link-hover block">iPhone</a>
-      <a class="link link-hover block">Android</a>
-    </nav>
-  </div>
-<br>
-  <!-- Bottom humble message -->
-  <div class="absolute bottom-4 left-1/2 transform -translate-x-1/2 text-center font-black">
-    <p class="text-sm text-neutral-content/60">Thanks for scrolling this far 🙏</p>
-    <p class="text-sm text-neutral-content/70 mt-1">&copy;Just a student learning one line of code at a time.</p>
-  </div>
- </footer>
-</div>
+    <div class="footer-gradient-line"></div>
+
+    <footer class="footer-grid">
+      <nav class="footer-nav">
+        <h6 class="footer-title">Services</h6>
+        <a class="footer-link" href="#">Branding</a>
+        <a class="footer-link" href="#">Design</a>
+        <a class="footer-link" href="#">Marketing</a>
+        <a class="footer-link" href="#">Advertisement</a>
+      </nav>
+      <nav class="footer-nav">
+        <h6 class="footer-title">Details</h6>
+        <a class="footer-link" href="#about">About</a>
+        <a class="footer-link" href="#contact">Contact</a>
+      </nav>
+      <nav class="footer-nav">
+        <h6 class="footer-title">Legal</h6>
+        <a class="footer-link" href="#">Terms of use</a>
+        <a class="footer-link" href="#">Privacy policy</a>
+        <a class="footer-link" href="#">Cookie policy</a>
+      </nav>
+      <nav class="footer-nav">
+        <h6 class="footer-title">Social</h6>
+        <a class="footer-link" href="#">Twitter</a>
+        <a class="footer-link" href="#">Instagram</a>
+        <a class="footer-link" href="#">GitHub</a>
+        <a class="footer-link" href="#">LinkedIn</a>
+      </nav>
+      <nav class="footer-nav">
+        <h6 class="footer-title">Explore</h6>
+        <a class="footer-link" href="#">Features</a>
+        <a class="footer-link" href="#">Enterprise</a>
+        <a class="footer-link" href="#">Security</a>
+        <a class="footer-link" href="#">Pricing</a>
+      </nav>
+      <nav class="footer-nav">
+        <h6 class="footer-title">Apps</h6>
+        <a class="footer-link" href="#">Mac</a>
+        <a class="footer-link" href="#">Windows</a>
+        <a class="footer-link" href="#">iPhone</a>
+        <a class="footer-link" href="#">Android</a>
+      </nav>
+    </footer>
+
+    <div class="footer-bottom">
+      <p>Thanks for scrolling this far 🙏</p>
+      <p class="footer-copy">© Just a student learning one line of code at a time.</p>
+    </div>
+  </section>
+
+  <script src="./main.js"></script>
 </body>
 </html>
